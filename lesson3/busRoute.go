@@ -14,9 +14,7 @@ func main() {
 	var totalSum int
 
 	fmt.Printf("Прибываем на остановку %s. В салоне пассажиров: %d\n", stantion1, passagir)
-	fmt.Println("Сколько пассажиров вышло на остановке?")
-	fmt.Scan(&passagir)
-	passagirBus := -passagir
+	var passagirBus int
 	fmt.Println("Сколько пассажиров зашло на остановке?")
 	fmt.Scan(&passagir)
 	passagirBus += passagir
@@ -31,7 +29,7 @@ func main() {
 	fmt.Println("Сколько пассажиров зашло на остановке?")
 	fmt.Scan(&passagir)
 	passagirBus += passagir
-	totalSum += (passagir * ticketAmount)
+	totalSum += passagir * ticketAmount
 	fmt.Printf("Отправляемся с остановки %s. В салоне пассажиров: %d\n", stantion3, passagirBus)
 	fmt.Println("----------Едем-------------")
 
@@ -42,14 +40,13 @@ func main() {
 	fmt.Println("Сколько пассажиров зашло на остановке?")
 	fmt.Scan(&passagir)
 	passagirBus += passagir
-	totalSum += (passagir * ticketAmount)
+	totalSum += passagir * ticketAmount
 	fmt.Printf("Отправляемся с остановки %s. В салоне пассажиров: %d\n", stantion4, passagirBus)
 	fmt.Println("----------Едем-------------")
 
 	fmt.Printf("Прибываем на остановку %s. В салоне пассажиров: %d\n", stantion4, passagirBus)
-	fmt.Println("Сколько пассажиров вышло на остановке?")
-	fmt.Scan(&passagir)
-	passagirBus -= passagir
+	fmt.Printf("На остановке вышло %d\n", passagirBus)
+	passagirBus -= passagirBus
 	driverSalary := totalSum / 4
 	taxes := totalSum / 5
 	carRepair := totalSum / 5
