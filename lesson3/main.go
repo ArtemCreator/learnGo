@@ -7,7 +7,8 @@ func main(){
 	//solution0304()
 	//solution030401()
 	fmt.Println("Задание 5")
-	solution0305()
+	//solution0305()
+	solution03051()
 }
 
 func solution0304() {
