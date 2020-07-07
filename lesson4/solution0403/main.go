@@ -8,19 +8,21 @@ func main() {
 	maxWithdrawalAmount := 100000
 
 	fmt.Println("Введите сумму снятия со счета")
-	fmt.Println("Минимум ", denomination)
+	fmt.Println("Доступный номинал для снятия денег ", denomination)
 	fmt.Println("Максимальная сумма снятия ", maxWithdrawalAmount)
 	fmt.Scan(&amount)
 
-	if amount < denomination{
-		fmt.Println("Отказано.\nСумма меньше минимального снятия")
-	}else if amount > maxWithdrawalAmount {
-		fmt.Println("Отказано.\nПревышена сумма максимального снятия")
+	if amount % 100 == 0 {
+		if amount < denomination {
+			fmt.Println("Отказано.\nСумма меньше минимального снятия")
+		} else if amount > maxWithdrawalAmount {
+			fmt.Println("Отказано.\nПревышена сумма максимального снятия")
+		} else {
+			fmt.Printf("Вы точно хотите снять %d?", amount)
+		}
 	}else {
-		fmt.Printf("Вы точно хотите снять %d", amount)
+		fmt.Println("Отказано.\nНекоретная сумма.")
 	}
-
-
 }
 func init() {
 	fmt.Println("*****Банкомат*****")
