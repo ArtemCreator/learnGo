@@ -29,6 +29,26 @@ func main() {
 		}
 	}
 	fmt.Printf("Студент порядковый № %d зачислен в группу №%d\n", serialNumStudent, numberGroup)
+
+	devGrupp()
+}
+
+func devGrupp(){
+	var numberStudents int
+	var countGroup int
+	var serialNumStudent int
+	var numberGroup int
+
+	fmt.Println("Cколько студентов числится на курсе ")
+	fmt.Scan(&numberStudents)
+	fmt.Println("На сколько групп надо разбить учащихся ")
+	fmt.Scan(&countGroup)
+
+	fmt.Println("Порядковый номер студента")
+	fmt.Scan(&serialNumStudent)
+
+	numberGroup = serialNumStudent % countGroup + 1
+	fmt.Printf("Студент порядковый № %d зачислен в группу №%d\n", serialNumStudent, numberGroup)
 }
 
 func init() {
