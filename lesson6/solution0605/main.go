@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Заполняем корзины яблоками
 package main
 
@@ -41,3 +42,6 @@ func main() {
 		fmt.Println("Проверьте данные")
 	}
 }
+=======
+package solution0605
+>>>>>>> ba8fcbd5e2f7e3ae72ea36efbf0e434413aedd45
