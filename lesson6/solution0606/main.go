@@ -20,7 +20,7 @@ func main() {
 	passanger := 0       // колличество людей в лифте
 	duration := 1        // направление лифта
 
-	for totalPass != 0 {
+	for {
 		fmt.Printf("Лифт находится на этаже: %d, в нем находится %d пассажир\n", currentLocation, passanger)
 		currentLocation += duration                     // лифт едет вверх
 		if duration == 1 && currentLocation == floors { // если лифт доехал до верха
@@ -81,6 +81,10 @@ func main() {
 				passanger = liftCapacity
 				fmt.Printf("Забрали с этажа %d пассажиров. Осталось %d пассажир на этаже.\n", liftCapacity, passFloor4)
 			}
+		}
+		if totalPass == 0 && currentLocation == 1{
+			fmt.Printf("Лифт находится на этаже: %d, в нем находится %d пассажир\n", currentLocation, passanger)
+			break
 		}
 	}
 
