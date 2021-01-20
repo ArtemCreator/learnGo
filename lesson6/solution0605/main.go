@@ -3,8 +3,8 @@ package main
 
 import "fmt"
 
-	var capacityBasket, capacityBasket2, capacityBasket3 int
-	var apples int
+var capacityBasket, capacityBasket2, capacityBasket3 int
+var apples int
 
 func main() {
 	fmt.Println("Какая вместимость у 3 корзин, введите 3 числа")
@@ -13,7 +13,7 @@ func main() {
 	fmt.Scan(&apples)
 	var index int
 
-	if capacityBasket > 0 && capacityBasket2 >0 && capacityBasket3 > 0 && apples > 0{
+	if capacityBasket > 0 && capacityBasket2 > 0 && capacityBasket3 > 0 && apples > 0 {
 		for index = 0; index < capacityBasket; index++ {
 			if apples == 0 {
 				break
@@ -37,7 +37,7 @@ func main() {
 			apples--
 		}
 		fmt.Printf("В корзине №3 находиться %d яблока, у вас осталось %d яблок\n", index, apples)
-	}else{
+	} else {
 		fmt.Println("Проверьте данные")
 	}
 }

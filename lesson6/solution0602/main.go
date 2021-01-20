@@ -10,7 +10,7 @@ func main() {
 
 	c := a + b
 
-	for a <= c{
+	for a <= c {
 		fmt.Println(a)
 		a++
 	}

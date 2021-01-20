@@ -11,16 +11,16 @@ func main() {
 	fmt.Println("ax^2 + bx + c = 0")
 	fmt.Println("Введите 3 числа")
 	fmt.Scan(&a, &b, &c)
-	d := b * b - 4 * (float64(a * c))
+	d := b*b - 4*(float64(a*c))
 
-	if d > 0{ // если дескрименант больше 0
+	if d > 0 { // если дескрименант больше 0
 		x1 := (-b - math.Sqrt(d)) / (2 * float64(a))
 		x2 := (-b + math.Sqrt(d)) / (2 * float64(a))
 		fmt.Printf("Уровнение имеет 2 корня: х1 = %.2f и х2 = %.2f", x1, x2)
-	}else if d == 0{ // если дескрименант равен 0
+	} else if d == 0 { // если дескрименант равен 0
 		x := -b / (2 * float64(a))
 		fmt.Printf("Уровнение имеет 1 корень: х = %.2f", x)
-	}else {
+	} else {
 		fmt.Println("Уровнение не имеет корней")
 	}
 

@@ -20,11 +20,11 @@ func main() {
 	fmt.Println("Порядковый номер студента")
 	fmt.Scan(&serialNumStudent)
 
-	if serialNumStudent % studentsCountGroup == 0{
+	if serialNumStudent%studentsCountGroup == 0 {
 		numberGroup = serialNumStudent / studentsCountGroup
-	}else {
-		numberGroup  = (serialNumStudent / studentsCountGroup) + 1
-		if numberGroup > countGroup{
+	} else {
+		numberGroup = (serialNumStudent / studentsCountGroup) + 1
+		if numberGroup > countGroup {
 			numberGroup = countGroup
 		}
 	}
@@ -33,7 +33,7 @@ func main() {
 	devGrupp()
 }
 
-func devGrupp(){
+func devGrupp() {
 	var numberStudents int
 	var countGroup int
 	var serialNumStudent int
@@ -47,7 +47,7 @@ func devGrupp(){
 	fmt.Println("Порядковый номер студента")
 	fmt.Scan(&serialNumStudent)
 
-	numberGroup = serialNumStudent % countGroup + 1
+	numberGroup = serialNumStudent%countGroup + 1
 	fmt.Printf("Студент порядковый № %d зачислен в группу №%d\n", serialNumStudent, numberGroup)
 }
 

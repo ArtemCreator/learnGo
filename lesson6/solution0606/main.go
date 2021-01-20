@@ -11,9 +11,9 @@ const (
 
 func main() {
 
-	passFloor4 := 3  // пассажиров на 4 этаже
-	passFloor7 := 3  // пассажиров на 7 этаже
-	passFloor10 := 3 // пассажиров на 10 этаже
+	passFloor4 := 3                                    // пассажиров на 4 этаже
+	passFloor7 := 3                                    // пассажиров на 7 этаже
+	passFloor10 := 3                                   // пассажиров на 10 этаже
 	totalPass := passFloor4 + passFloor7 + passFloor10 // общее количество пассажиров
 
 	currentLocation := 1 // текущее положение лифта
@@ -46,14 +46,14 @@ func main() {
 				passanger = liftCapacity
 				fmt.Printf("Забрали с этажа %d пассажиров. Осталось %d пассажир на этаже.", liftCapacity, passFloor10)
 			}
-		}else if duration == -1 && currentLocation == 7 && passFloor7 > 0 && passanger < liftCapacity { // иначе если лифт поехал вниз то
+		} else if duration == -1 && currentLocation == 7 && passFloor7 > 0 && passanger < liftCapacity { // иначе если лифт поехал вниз то
 			fmt.Println("7 этаж")
 			if passFloor7 == 1 {
 				passFloor7 = 0
 				totalPass--
 				passanger++
 				fmt.Printf("Забрали с этажа 1 пассажирa. Осталось %d пассажир на этаже.\n", passFloor7)
-			}else if passFloor7%liftCapacity == 0 { // если людей кратно вместимостиЛифта
+			} else if passFloor7%liftCapacity == 0 { // если людей кратно вместимостиЛифта
 				passFloor7 -= liftCapacity // зашли люди
 				totalPass -= liftCapacity
 				fmt.Printf("Забрали с этажа %d пассажиров. Осталось %d пассажир на этаже.\n", liftCapacity, passFloor7)
@@ -63,7 +63,7 @@ func main() {
 				passanger = liftCapacity
 				fmt.Printf("Забрали с этажа %d пассажиров. Осталось %d пассажир на этаже.\n", liftCapacity, passFloor7)
 			}
-		}else if duration == -1 && currentLocation == 4 && passFloor4 > 0 && passanger < liftCapacity { // иначе если лифт поехал вниз то
+		} else if duration == -1 && currentLocation == 4 && passFloor4 > 0 && passanger < liftCapacity { // иначе если лифт поехал вниз то
 			fmt.Println("4 этаж")
 			//break
 			if passFloor4 == 1 {
@@ -71,7 +71,7 @@ func main() {
 				totalPass--
 				passanger++
 				fmt.Printf("Забрали с этажа 1 пассажирa. Осталось %d пассажир на этаже.\n", passFloor4)
-			}else if passFloor4%liftCapacity == 0 { // если людей кратно вместимостиЛифта
+			} else if passFloor4%liftCapacity == 0 { // если людей кратно вместимостиЛифта
 				passFloor4 -= liftCapacity // зашли люди
 				totalPass -= liftCapacity
 				fmt.Printf("Забрали с этажа %d пассажиров. Осталось %d пассажир на этаже.\n", liftCapacity, passFloor4)
@@ -82,7 +82,7 @@ func main() {
 				fmt.Printf("Забрали с этажа %d пассажиров. Осталось %d пассажир на этаже.\n", liftCapacity, passFloor4)
 			}
 		}
-		if totalPass == 0 && currentLocation == 1{
+		if totalPass == 0 && currentLocation == 1 {
 			fmt.Printf("Лифт находится на этаже: %d, в нем находится %d пассажир\n", currentLocation, passanger)
 			break
 		}

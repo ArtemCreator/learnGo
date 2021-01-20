@@ -8,23 +8,23 @@ func main() {
 	fmt.Println("Введите 3 числа, проверим есть ли совпадающие из них")
 	fmt.Scan(&a, &b, &c)
 
-	if a == b || a == c || b == c{
+	if a == b || a == c || b == c {
 		fmt.Println("Есть совпадения чисел")
-	}else {
+	} else {
 		fmt.Println("Нету совпадений")
 	}
 
 	comparing()
 }
 
-func comparing()  {
+func comparing() {
 	var a, b, c int
 	var count int
 
 	fmt.Println("Введите 3 числа, проверим есть ли совпадающие из них")
 	fmt.Scan(&a, &b, &c)
 
-	if a == b || a == c || b == c{
+	if a == b || a == c || b == c {
 		fmt.Print("Совпадают числа: ")
 		if a == b {
 			count++
@@ -39,7 +39,7 @@ func comparing()  {
 			fmt.Printf("%d и %d; ", b, c)
 		}
 		fmt.Println(" всего совпадений ", count)
-	}else {
+	} else {
 		fmt.Println("Нету совпадений")
 	}
 }

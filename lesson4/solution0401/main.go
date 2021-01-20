@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	var examScores, examScores2, examScores3  int
+	var examScores, examScores2, examScores3 int
 	var totalScores int
 	const passingScore int = 275
 
@@ -18,7 +18,7 @@ func main() {
 
 	if totalScores >= passingScore {
 		fmt.Printf("Вы поступили. Количество набранных баллов %d\n", totalScores)
-	}else {
+	} else {
 		fmt.Printf("Вы не поступили. Количество набранных баллов %d\n", totalScores)
 	}
 }

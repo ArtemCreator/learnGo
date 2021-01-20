@@ -9,17 +9,17 @@ func main() {
 
 	//fmt.Print(val, val2, val3)
 
-	if val > 5{
-	fmt.Printf("Значение %d больше 5\n", val)
+	if val > 5 {
+		fmt.Printf("Значение %d больше 5\n", val)
 	}
-	if val2 > 5{
+	if val2 > 5 {
 		fmt.Printf("Значение %d больше 5\n", val2)
 	}
-	if val3 > 5{
+	if val3 > 5 {
 		fmt.Printf("Значение %d больше 5\n", val3)
 	}
 }
 
-func init(){
+func init() {
 	fmt.Println("****Три числа, какое больше 5****")
 }

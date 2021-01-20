@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func solution03051()  {
+func solution03051() {
 	a := 42
 	b := 153
 
@@ -13,7 +13,7 @@ func solution03051()  {
 	// arithmetic method
 	a = a + b // 42 + 153 = 195
 	b = b - a // 153 - 192 = -42
-	b = - b   // 42
+	b = -b    // 42
 	a = a - b // 195 - 42 = 153
 
 	fmt.Println("a:", a)
@@ -22,7 +22,7 @@ func solution03051()  {
 
 	//multiplication/division
 	a = a * b
-	b = a / b// деление НЕ целочисленное
+	b = a / b // деление НЕ целочисленное
 	a = a / b
 	fmt.Println("a:", a)
 	fmt.Println("b:", b)
@@ -34,7 +34,5 @@ func solution03051()  {
 	a = a ^ b
 	fmt.Println("a:", a)
 	fmt.Println("b:", b)
-
-
 
 }

@@ -6,7 +6,9 @@ import "fmt"
 func main() {
 	var a, b, c int
 	for c != 1000 {
-		a++; b++; c++
+		a++
+		b++
+		c++
 		if a <= 10 {
 			fmt.Print("a = ", a)
 		}

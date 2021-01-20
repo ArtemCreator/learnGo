@@ -19,14 +19,14 @@ func main() {
 
 	//fmt.Print(n1, n2, n3, n4)
 
-	if n1 + n2 == n3 + n4{
-		if n1 == n4 && n2 == n3{
+	if n1+n2 == n3+n4 {
+		if n1 == n4 && n2 == n3 {
 			fmt.Println("Зеркалный билет")
 		}
 		fmt.Println("Счастливый билет")
-	}else if numberTicket < 1000 || numberTicket > 9999{
+	} else if numberTicket < 1000 || numberTicket > 9999 {
 		fmt.Println("Введено не четерехзначное число")
-	}else {
+	} else {
 		fmt.Println("Обычный билет")
 	}
 }

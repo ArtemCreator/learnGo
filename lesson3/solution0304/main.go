@@ -38,4 +38,3 @@ func main() {
 	dayss := (targetHeight-startHeight-growth)/(growth-ate) + 1
 	fmt.Printf("Что бы бамбуку достичь %d сантиметров понадобится %d полных суток\n", targetHeight, dayss)
 }
-

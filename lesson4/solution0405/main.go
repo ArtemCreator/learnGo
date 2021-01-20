@@ -15,7 +15,7 @@ func main() {
 
 	fmt.Println("Сколько обслуживалось человек?")
 	fmt.Scan(&guests)
-	if guests >= 5{
+	if guests >= 5 {
 		service = totalAmount / 10
 		totalAmount += service
 	}
@@ -24,12 +24,12 @@ func main() {
 		"от 1 до 7, где 1 это понедельник, 7 - воскресенье")
 	fmt.Scan(&day)
 
-	if day == 1{
+	if day == 1 {
 		delivery = totalAmount / 10
 		totalAmount -= delivery
 	}
-	if day == 5{
-		if totalAmount > countDelivery{
+	if day == 5 {
+		if totalAmount > countDelivery {
 			delivery = (totalAmount / 100) * 5
 			totalAmount -= delivery
 		}

@@ -8,15 +8,15 @@ func main() {
 	fmt.Println("Введите координаты точки")
 	fmt.Scan(&x, &y)
 
-	if x > 0 && y > 0{
+	if x > 0 && y > 0 {
 		fmt.Print("Точка находится в I четверти")
-	}else if x < 0 && y > 0 {
+	} else if x < 0 && y > 0 {
 		fmt.Print("Точка находится в II четверти")
-	}else if x < 0 && y < 0 {
+	} else if x < 0 && y < 0 {
 		fmt.Print("Точка находится в III четверти")
-	}else if x > 0 && y < 0 {
+	} else if x > 0 && y < 0 {
 		fmt.Print("Точка находится в IV четверти")
-	}else{
+	} else {
 		fmt.Print("Точка находится на нулевой оси координат")
 	}
 }

@@ -12,7 +12,7 @@ func main() {
 	fmt.Println("Максимальная сумма снятия ", maxWithdrawalAmount)
 	fmt.Scan(&amount)
 
-	if amount % 100 == 0 {
+	if amount%100 == 0 {
 		if amount < denomination {
 			fmt.Println("Отказано.\nСумма меньше минимального снятия")
 		} else if amount > maxWithdrawalAmount {
@@ -20,7 +20,7 @@ func main() {
 		} else {
 			fmt.Printf("Вы точно хотите снять %d?", amount)
 		}
-	}else {
+	} else {
 		fmt.Println("Отказано.\nНекоретная сумма.")
 	}
 }
