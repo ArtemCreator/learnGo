@@ -2,11 +2,19 @@ package main
 
 import "fmt"
 
-type board struct {
-	row int
-	column int
+func main() {
+	//chess(6, 8)
+	//triangle1(10)
+	//triangle4(10)
+	//triangle2(10)
+	//triangle3(10)
+	//triangle5(10)
+	triangle6(10)
+	//triangle7(10)
 }
-func chess(row, column int)  {
+
+// chess выводит на экран шахматную доску
+func chess(row, column int) {
 	//for i := 0; i < row; i++ {
 	//	for j := 0; j < column; j++ {
 	//		if i % 2 == 0 {
@@ -28,9 +36,9 @@ func chess(row, column int)  {
 	//}
 	for i := 0; i < row; i++ {
 		for j := 0; j < column; j++ {
-			if (i % 2 == 0 && j % 2 == 0) || (i % 2 != 0 && j % 2 != 0) {
+			if (i%2 == 0 && j%2 == 0) || (i%2 != 0 && j%2 != 0) {
 				fmt.Print(" ")
-			}else {
+			} else {
 				fmt.Print("*")
 			}
 		}
@@ -38,67 +46,73 @@ func chess(row, column int)  {
 	}
 }
 
-func triangle1(row int)  {
-	for i := 0; i <= row; i++{
-		for j := 0; j <= i; j++{
+// 1ый вариант треугольника
+func triangle1(row int) {
+	for i := 0; i <= row; i++ {
+		for j := 0; j <= i; j++ {
 			fmt.Print("(")
 		}
 		fmt.Println()
 	}
 }
 
-func triangle2(row int)  {
-	for i := 0; i <= row; i++{
-		for j := row; j > i; j--{
+// 2ый вариант треугольника
+func triangle2(row int) {
+	for i := 0; i <= row; i++ {
+		for j := row; j > i; j-- {
 			fmt.Print("(")
 		}
 		fmt.Println()
 	}
 }
 
-func triangle3(row int)  {
-	for i := 0; i <= row; i++{
-		for j := row; j > i; j--{
+// Обратный вариант 1го треугольника
+func triangle3(row int) {
+	for i := 0; i <= row; i++ {
+		for j := row; j > i; j-- {
 			fmt.Print(" ")
 		}
-		for j := 0; j <= i; j++{
-			fmt.Print("(")
-		}
-		fmt.Println()
-	}
-}
-func triangle4(row int)  {
-	for i := 0; i <= row; i++{
-		for j := 0; j <= i; j++{
-			fmt.Print(" ")
-		}
-		for j := row; j > i; j--{
+		for j := 0; j <= i; j++ {
 			fmt.Print("(")
 		}
 		fmt.Println()
 	}
 }
 
-func triangle5(row int)  {
-	for i := 0; i <= row; i++{
-		for j := row; j > i/2; j--{
+// Обратный вариант 2го треугольника
+func triangle4(row int) {
+	for i := 0; i <= row; i++ {
+		for j := 0; j <= i; j++ {
 			fmt.Print(" ")
 		}
-		for j := 0; j <= i; j++{
+		for j := row; j > i; j-- {
+			fmt.Print("(")
+		}
+		fmt.Println()
+	}
+}
+
+func triangle5(row int) {
+	for i := 0; i <= row; i++ {
+		for j := row; j > i/2; j-- {
+			fmt.Print(" ")
+		}
+		for j := 0; j <= i; j++ {
 			fmt.Print("*")
 		}
 		fmt.Println("")
 	}
 }
 
-func triangle6(row int)  {
-	for i := 0; i <= row; i++{
+// Равностороний треугольник
+func triangle6(row int) {
+	for i := 0; i <= row; i++ {
 		// левое пустое пространство
-		for j := row; j > i; j--{
+		for j := row; j > i; j-- {
 			fmt.Print(" ")
 		}
 		// левая часть треугольника
-		for j := 0; j <= i; j++{
+		for j := 0; j <= i; j++ {
 			fmt.Print("*")
 		}
 		// правая часть треугольника
@@ -112,14 +126,16 @@ func triangle6(row int)  {
 		fmt.Println("")
 	}
 }
-func triangle7(row int)  {
-	for i := row; i > 0; i--{
+
+// Reverse равностороний треугольник
+func triangle7(row int) {
+	for i := row; i > 0; i-- {
 		// левое пустое пространство
 		for j := row; j > i; j-- {
 			fmt.Print(" ")
 		}
 		// левая часть треугольника
-		for j := 0; j < i; j++{
+		for j := 0; j < i; j++ {
 			fmt.Print("*")
 		}
 		// правая часть треугольника
@@ -127,21 +143,9 @@ func triangle7(row int)  {
 			fmt.Print("*")
 		}
 		// правое пустое место
-		for j := row; j > i; j--{
+		for j := row; j > i; j-- {
 			fmt.Print(" ")
 		}
 		fmt.Println("")
 	}
 }
-
-func main() {
-	//chess(6, 8)
-	triangle1(10)
-	triangle4(10)
-	triangle2(10)
-	triangle3(10)
-	triangle5(10)
-	triangle6(10)
-	triangle7(10)
-}
-
