@@ -6,7 +6,7 @@ func main() {
 	fmt.Println("Введите день недели в сокращенной форме\n (пн, вт, ср, чт, пт)")
 	var dayweek string
 	_, _ = fmt.Scan(&dayweek)
-	switch dayweek{
+	switch dayweek {
 	case "пн":
 		fmt.Println("понедельник")
 		fallthrough
