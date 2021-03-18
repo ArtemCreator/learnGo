@@ -15,6 +15,12 @@ func Test_lemonadeChange(t *testing.T) {
 		// TODO: Add test cases.
 		{name: "ok", args: args{[]int{5, 10, 5, 20}}, want: true},
 		{name: "not ok", args: args{[]int{10, 10}}, want: false},
+		{name: "three by five - ok", args: args{
+			[]int{5, 5, 5, 20},
+		}, want: true},
+		{name: "not a multiple of five", args: args{
+			[]int{5, 10, 14},
+		}, want: false},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

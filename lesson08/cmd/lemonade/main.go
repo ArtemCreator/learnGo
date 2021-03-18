@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	var bills = []int{5, 10, 5, 20}
+	var bills = []int{5, 5, 5, 20, 10, 5}
 	//fmt.Print(bills)
 	fmt.Println(lemonadeChange(bills))
 }
@@ -12,23 +12,27 @@ func lemonadeChange(bills []int) bool {
 	var five, ten int
 
 	for _, val := range bills {
-		switch val {
-		case 5:
+		switch {
+		case val%5 != 0 || val < 0 || val > 20:
+			return false
+		case val == 5:
 			five++
-		case 10:
+		case val == 10:
 			five--
 			ten++
-		case 20:
-			if ten > 0 {
+		case val == 20:
+			switch {
+			case ten > 0:
 				ten--
 				five--
-			} else {
+			default:
 				five -= 3
 			}
 		}
-		if five < 0 || ten < 0 {
-			return false
-		}
+
+	}
+	if five < 0 || ten < 0 {
+		return false
 	}
 	if bills == nil {
 		return false
