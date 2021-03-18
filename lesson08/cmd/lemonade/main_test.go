@@ -19,8 +19,9 @@ func Test_lemonadeChange(t *testing.T) {
 			[]int{5, 5, 5, 20},
 		}, want: true},
 		{name: "not a multiple of five", args: args{
-			[]int{5, 10, 14},
+			[]int{5, 10, 21},
 		}, want: false},
+		{name: "bills empty", args: args{[]int{}}, want: false},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
