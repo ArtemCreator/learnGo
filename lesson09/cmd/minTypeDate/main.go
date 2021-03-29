@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	var first, second int
+	var first, second int16
 
 	_, _ = fmt.Scan(&first, &second)
 	
