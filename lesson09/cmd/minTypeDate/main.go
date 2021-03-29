@@ -8,10 +8,10 @@ import (
 func main() {
 	var first, second int
 
-	fmt.Scan(&first, &second)
+	_, _ = fmt.Scan(&first, &second)
 	
 	total := int64(first) * int64(second)
-	fmt.Printf("Value %d saved in %s type data", total, printDataType(total))
+	fmt.Printf("Value %d well be save in %s type data", total, printDataType(total))
 
 }
 
