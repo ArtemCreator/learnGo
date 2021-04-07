@@ -16,6 +16,7 @@ func Test_printDataType(t *testing.T) {
 		{name: "1 * -1", args: args{-1}, wantTypeData: "int8"},
 		{name: "640 * 100", args: args{64000}, wantTypeData: "uint16"},
 		{name: "640 * -100", args: args{-64000}, wantTypeData: "int32"},
+		{name: "1 * -127", args: args{-127}, wantTypeData: "int8"},
 		{name: "3000 * 3000", args: args{9_000_000}, wantTypeData: "uint32"},
 		{name: "3000 * -3000", args: args{-9_000_000}, wantTypeData: "int32"},
 	}
